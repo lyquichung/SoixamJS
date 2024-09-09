@@ -13,7 +13,11 @@ SoixamJS is certainly not the mainstream choice for everyone. But I believe it w
 
 ## Download
 
-**[SoixamJS.js](https://raw.githubusercontent.com/lyquichung/SoixamJS/main/SoixamJS.js)**.
+**[./SoixamJS.js](./SoixamJS.js)**.
+
+## Demo
+
+**[./demo.html](./demo.html)**.
 
 
 ## Installation guide
@@ -290,7 +294,7 @@ Some pre-written functions are designed to handle data processing more effective
 
 - SX.add(string name,string obj):void: Create custom objects in SX. Objects like SX.Node, SX.Library, SX.Config, SX.Temp, and SX.System are created using this method
 - SX.createElement(string html):SXNode: Create an SXNode from HTML code
-- SX.invert():void: Switch between dark and light modes by inverting the colors of the entire page using CSS [Demo]
+- SX.invert():void: Switch between dark and light modes by inverting the colors of the entire page using CSS
 - SX.range(number min, number max):Array: Create an array of numbers from min to max
 - SX.rand(int min, int max):Number: Generate a random number between min to max, inclusive of both min and max
 - SX.randFloat(float min, float max):Number: Generate a random decimal number between min to max, inclusive of both min and max
