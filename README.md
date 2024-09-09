@@ -13,11 +13,11 @@ SoixamJS is certainly not the mainstream choice for everyone. But I believe it w
 
 ## Download
 
-**[./SoixamJS.js](./SoixamJS.js)**.
+**[./SoixamJS.js](https://lyquichung.github.io/SoixamJS/SoixamJS.js)**.
 
 ## Demo
 
-**[./demo.html](./demo.html)**.
+**[./demo.html](https://lyquichung.github.io/SoixamJS/demo.html)**.
 
 
 ## Installation guide
