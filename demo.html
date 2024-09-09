@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang='vi' data-sx-sKey=123456>
+<head>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1'/>
+    <title>SoixamJS Playground</title>
+    <link href='./SoixamJS.css' type='text/css' rel='stylesheet'/>
+    <script src='./SoixamJS.js' async></script>
+    <script>
+    SXInit=window.SXInit || [],SXReady=window.SXReady || [],SXLoaded=window.SXLoaded || [];
+    </script>
+    <style>
+    @media screen{
+        html{
+            background:#fff;
+        }
+        body{
+            background:rgba(0,0,0,0.02);
+            font-family:serif;
+        }
+        body .website_layout{
+            margin:0 1rem;
+            box-shadow:0 0 1rem rgba(0,0,0,0.1);
+            min-height:100vh;
+        }
+
+        a{
+            color:blue;
+            cursor:pointer;
+        }
+
+        header.header{
+            padding:0 1rem 1rem 1rem;
+        }
+
+        main.main{
+            padding:0 1rem 1rem 1rem;
+        }
+
+        footer.footer{
+            padding:0 1rem 1rem 1rem;
+        }
+    }
+    </style>
+    <script>
+    SXReady.push(function(){
+        SX('#year').text((new Date()).getFullYear());
+    });
+    
+    async function demoAlert(){
+        await SX.alert('This is a alert box!');
+        alert('Closed');
+    };
+
+    async function demoConfirm(){
+        let choose=await SX.confirm('Please choose Yes or No');
+        alert('Your choose: '+choose);
+    };
+
+    async function demoPrompt(){
+        let name=await SX.prompt('Please enter your name:');
+        alert('Your name is: '+name);
+    };
+    </script>
+</head>
+<body>
+<div class='sx_container'><div class='website_layout'>
+    <header class='header'>
+        <h1>SoixamJS Playground</h1>
+        <p><a href='./'>SoixamJS</a> is a lightweight, open-source JavaScript library created by Lý Quí Chung. SoixamJS simplifies DOM element manipulation and makes website layout building more straightforward.</p>
+    </header>
+    <main class='main'>
+    <h2>Demo</h2>
+    <ul>
+        <li><a onclick='SX.invert();'>SX.invert()</a></li>
+        <li><a onclick='demoAlert();'>SX.alert()</a></li>
+        <li><a onclick='demoConfirm();'>SX.confirm()</a></li>
+        <li><a onclick='demoPrompt();'>SX.prompt()</a></li>
+    </ul>
+
+    <h2>Full document</h2>
+    <a href='https://lyquichung.github.io/SoixamJS/'>https://lyquichung.github.io/SoixamJS/</a>
+    </main>
+    <footer class='footer'>&copy;<span id='year'></span> <a href='./'>SoixamJS</a></footer>
+</div></div>
+</body>
+</html>
