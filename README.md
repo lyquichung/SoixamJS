@@ -55,7 +55,7 @@ Here's an example of how to use SoixamJS to manipulate the DOM:
 
 ```javascript
 SXReady.push(function(){
-    SX('body').appendChild('<span>World</span>').prependChild('<span>Hello</span><span>World</span>');
+    SX('body').appendChild('<span>World</span>').prependChild('<span>Hello</span>');
     console.log(SX('span'));
 });
 ```
