@@ -1,5 +1,6 @@
 /**
  * SoixamJS - A lightweight, open-source JavaScript library
+ * Filename: SoixamJS.js
  * Author: Lý Quí Chung
  * License: GNU General Public License (GPL)
  * SoixamJS simplifies DOM element manipulation and makes website layout building more straightforward.
@@ -553,6 +554,7 @@
                 dialogElement.find('.sx_dialog_input').html('<span class="sx_textbox"></span>');
                 dialogElement.find('.sx_dialog_input .sx_textbox').appendChild(inputElement);
                 inputElement.focus();
+                
             }
 
             let formSubmitEventAdded=false;
@@ -1140,10 +1142,27 @@
             }
             return this[0].innerHTML;
         }
-        if(typeof html!=='string'){return this;}
-        this.innerHTML='';
-        let div=SX.createElement(html);
-        div.appendTo(this);
+        if(typeof html.toString!=='function'){return this;}
+        html=html.toString();
+        for(let i=0,j=this.length;i<j;i++){
+            this[i].innerHTML=html;
+        }
+        return this;
+    };
+
+    SX.Node.prototype.text=function(text){
+        if(text===undefined){
+            if(this.length!==1){
+                return '';
+            }
+            return this[0].innerText;
+        }
+        if(typeof text.toString!=='function'){return this;}
+        text=text.toString();
+        
+        for(let i=0,j=this.length;i<j;i++){
+            this[i].innerText=text;
+        }
         return this;
     };
 
@@ -1155,7 +1174,10 @@
             if(!this[i].hasAttribute('value')){return '';}
             return this[0].value;
         }
-        if(typeof value!=='string'){return this;}
+        
+        if(typeof value.toString!=='function'){return this;}
+        value=value.toString();
+        
         this.value=value;
         return this;
     };
@@ -1393,7 +1415,7 @@
                     frag.appendChild(childNode.cloneNode(true));
                 }
             });
-            this.appendChild(frag);
+            this[0].appendChild(frag);
             return this;
         }else if(childNode instanceof SX.Node){
             parentNode.forEach(function(){
