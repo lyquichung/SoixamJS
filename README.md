@@ -1,4 +1,3 @@
-```
 # SoixamJS
 
 **SoixamJS** is a lightweight, open-source JavaScript library created by Lý Quí Chung. It simplifies DOM element manipulation and makes website layout building easier. SoixamJS takes a simple yet effective approach, without following modern trends, but focusing on practicality.
@@ -64,4 +63,3 @@ SXReady.push(function(){
 ## License
 
 SoixamJS is licensed under the **[GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.html)**.
-```
